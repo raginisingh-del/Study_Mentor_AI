@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Mentor AI - Your Learning Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .alert-box {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 700px;
+        }
+
+        .alert-box h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .alert-box p {
+            color: #78350f;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .features {
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #2d3748;
+            margin-bottom: 50px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .chat-prompt {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e5e7ff 100%);
+            padding: 40px;
+            text-align: center;
+            border-top: 2px solid #667eea;
+        }
+
+        .chat-prompt h3 {
+            font-size: 28px;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .chat-prompt p {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .chat-arrow {
+            font-size: 36px;
+            color: #667eea;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .features h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🎓 Study Mentor AI</h1>
+            <p>Your personal 24/7 learning assistant powered by artificial intelligence. Get instant help with study planning, exam preparation, and learning techniques.</p>
+            
+            <div class="alert-box">
+                <h3>⚠️ Important: To See the Chat Widget</h3>
+                <p>
+                    <strong>This page must be hosted online for Tidio to work.</strong><br>
+                    Upload this file to Netlify Drop (https://app.netlify.com/drop) - it's FREE and takes 2 minutes!<br>
+                    OR use the Tidio Playground in your dashboard for presentation.
+                </p>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>How Can Study Mentor Help You?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Study Planning</h3>
+                    <p>Create personalized study schedules that fit your goals and available time</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Learning Techniques</h3>
+                    <p>Master proven methods like Pomodoro, Active Recall, and Spaced Repetition</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Exam Preparation</h3>
+                    <p>Get strategic guidance for acing your exams with timeline-based preparation</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3>Stay Motivated</h3>
+                    <p>Overcome procrastination and burnout with productivity tips and encouragement</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Subject-Specific Tips</h3>
+                    <p>Tailored strategies for Math, Science, Languages, History, and more</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Time Management</h3>
+                    <p>Learn to balance studies, activities, and rest for optimal performance</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-prompt">
+            <h3>Ready to Start Learning Smarter?</h3>
+            <p>The chat widget should appear in the bottom right corner!</p>
+            <p style="font-size: 14px; color: #94a3b8;">
+                (If you don't see it, this page needs to be hosted online - see yellow box above)
+            </p>
+            <div class="chat-arrow">↘️</div>
+        </div>
+    </div>
+
+    <!-- TIDIO CHAT WIDGET CODE -->
+    <!-- This is YOUR unique Tidio code -->
+    <script src="//code.tidio.co/8vsihodphkwrdhlnu3eoxt5fgheinx3h.js" async></script>
+    <!-- The widget will appear in bottom-right corner when hosted online -->
+
+</body>
+</html>
